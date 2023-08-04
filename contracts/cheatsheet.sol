@@ -4,7 +4,7 @@
 
 pragma solidity ^0.8.15;
 // ^ floating pragma, min 0.8.15 max excluding 0.9.0
-// same as complex pragma: pragma solidity >=0.8.15 <0.9.0;
+// same as complex pragma: pragma solidity >=0.8.15 <0.9.0; 
 // major.breakingchanges.bugfixes
 // only makes the compiler check for compatibility and throws error if not matching!
 // should only be floating during development, fixed everywhere during testing & deployment
@@ -121,7 +121,7 @@ contract Test is ITest, AdvTestBase, Storage, ownerNamespace.Owner, Ballot {
     // external, public, internal, private. Within a grouping, place the view and pure functions last.
 
     // Statically-typed! Means all types must be known at compile time.
-    // There's no concept of null or undefined.
+    // There's no concept of null or undefined in solidity.
     // All "empty" variables are well defined in "zero-state" – it's preferrable to explicitly
     // assign them a value to avoid incorrect assumptions or unintended use of zero-addresses.
     // An exception to this rule are upgradable contracts where the constructor wouldn't be executed in
